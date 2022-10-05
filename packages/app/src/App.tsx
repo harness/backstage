@@ -102,6 +102,7 @@ import { PlaylistIndexPage } from '@backstage/plugin-playlist';
 import { TwoColumnLayout } from './components/scaffolder/customScaffolderLayouts';
 import { HashRouter } from 'react-router-dom';
 import type { ChildAppProps } from '@harness/microfrontends';
+import { MyPluginPage } from '@backstage/plugin-my-plugin';
 
 const app = createApp({
   apis,

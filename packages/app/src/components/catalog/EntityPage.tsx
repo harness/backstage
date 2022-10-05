@@ -153,6 +153,8 @@ import {
   ReportIssue,
 } from '@backstage/plugin-techdocs-module-addons-contrib';
 
+import { EntityMyPluginCard, EntityMyPluginContent } from '@backstage/plugin-my-plugin';
+
 const customEntityFilterKind = ['Component', 'API', 'System'];
 
 const EntityLayoutWrapper = (props: { children?: ReactNode }) => {
@@ -362,6 +364,10 @@ const overviewContent = (
       <EntityLinksCard />
     </Grid>
 
+    <Grid item md={4} xs={12}>
+      <EntityMyPluginCard />
+    </Grid>
+
     {cicdCard}
 
     <EntitySwitch>
@@ -402,6 +408,10 @@ const serviceEntityPage = (
   <EntityLayoutWrapper>
     <EntityLayout.Route path="/" title="Overview">
       {overviewContent}
+    </EntityLayout.Route>
+
+    <EntityLayout.Route path="/my-plugin" title="My Plugin">
+      <EntityMyPluginContent />
     </EntityLayout.Route>
 
     <EntityLayout.Route path="/ci-cd" title="CI/CD">

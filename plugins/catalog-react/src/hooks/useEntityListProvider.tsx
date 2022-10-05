@@ -159,17 +159,17 @@ export const EntityListProvider = <EntityFilters extends DefaultEntityFilters>({
         compact(Object.values(outputState.appliedFilters)),
       );
 
-      const queryParams = Object.keys(requestedFilters).reduce(
-        (params, key) => {
-          const filter: EntityFilter | undefined =
-            requestedFilters[key as keyof EntityFilters];
-          if (filter?.toQueryValue) {
-            params[key] = filter.toQueryValue();
-          }
-          return params;
-        },
-        {} as Record<string, string | string[]>,
-      );
+      // const queryParams = Object.keys(requestedFilters).reduce(
+      //   (params, key) => {
+      //     const filter: EntityFilter | undefined =
+      //       requestedFilters[key as keyof EntityFilters];
+      //     if (filter?.toQueryValue) {
+      //       params[key] = filter.toQueryValue();
+      //     }
+      //     return params;
+      //   },
+      //   {} as Record<string, string | string[]>,
+      // );
 
       // TODO(mtlewis): currently entities will never be requested unless
       // there's at least one filter, we should allow an initial request
@@ -194,14 +194,17 @@ export const EntityListProvider = <EntityFilters extends DefaultEntityFilters>({
       }
 
       if (isMounted()) {
-        const oldParams = qs.parse(location.search, {
-          ignoreQueryPrefix: true,
-        });
-        const newParams = qs.stringify(
-          { ...oldParams, filters: queryParams },
-          { addQueryPrefix: true, arrayFormat: 'repeat' },
-        );
-        const newUrl = `${window.location.pathname}${newParams}`;
+      //   const oldParams = qs.parse(location.search, {
+      //     ignoreQueryPrefix: true,
+      //   });
+      //   console.log("Old Params: ",oldParams, " query params ",queryParams," requested filters ", requestedFilters);
+      //   const newParams = qs.stringify(
+      //     { filters: queryParams },
+      //     { addQueryPrefix: true},
+      //   );
+        
+        const newUrl = `${window.location.hash}`;
+        
         // We use direct history manipulation since useSearchParams and
         // useNavigate in react-router-dom cause unnecessary extra rerenders.
         // Also make sure to replace the state rather than pushing, since we
