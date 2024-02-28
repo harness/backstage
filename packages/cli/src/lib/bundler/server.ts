@@ -167,6 +167,7 @@ DEPRECATION WARNING: React Router Beta is deprecated and support for it will be 
     );
     const { createHtmlPlugin: viteHtml } = await import('vite-plugin-html');
     viteServer = await vite.createServer({
+      appType: 'mpa',
       define: {
         global: 'window',
         'process.argv': JSON.stringify(process.argv),
