@@ -3661,6 +3661,7 @@ __metadata:
     webpack: ^5.70.0
     webpack-dev-server: ^4.7.3
     webpack-node-externals: ^3.0.0
+    webpack-retry-chunk-load-plugin: ^3.0.0
     yaml: ^2.0.0
     yml-loader: ^2.1.0
     yn: ^4.0.0
@@ -37558,7 +37559,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:^2.2.1, prettier@npm:^2.7.1":
+"prettier@npm:^2.2.1, prettier@npm:^2.6.2, prettier@npm:^2.7.1":
   version: 2.8.8
   resolution: "prettier@npm:2.8.8"
   bin:
@@ -44263,6 +44264,17 @@ __metadata:
   version: 3.0.0
   resolution: "webpack-node-externals@npm:3.0.0"
   checksum: 355080c35c821115b97dda8c93d9d0565a90a6012a532324eb0d6a64f8f0d609431fd29504fc7ce414755841ac14f601f3eef99472c2c5dc00233b504ebe73f2
+  languageName: node
+  linkType: hard
+
+"webpack-retry-chunk-load-plugin@npm:^3.0.0":
+  version: 3.1.1
+  resolution: "webpack-retry-chunk-load-plugin@npm:3.1.1"
+  dependencies:
+    prettier: ^2.6.2
+  peerDependencies:
+    webpack: ">=5.0.0"
+  checksum: ea621b7317691378d93dbfa67737657e7628d51988ae5540e04a0bd8e91deeadcd5cb5ba8d8995c89b5eb532190c2d818029992b34305821ea72376296dcdf8d
   languageName: node
   linkType: hard
 

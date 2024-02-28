@@ -32,6 +32,7 @@ import fs from 'fs-extra';
 import { getPackages } from '@manypkg/get-packages';
 import { isChildPath } from '@backstage/cli-common';
 import nodeExternals from 'webpack-node-externals';
+import { RetryChunkLoadPlugin } from 'webpack-retry-chunk-load-plugin';
 import { optimization } from './optimization';
 import pickBy from 'lodash/pickBy';
 import { readEntryPoints } from '../entryPoints';
@@ -152,6 +153,9 @@ export async function createConfig(
           singleton: true,
         },
       },
+    }),
+    new RetryChunkLoadPlugin({
+      maxRetries: 3,
     }),
   );
 
