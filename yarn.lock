@@ -3239,7 +3239,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@backstage/backend-common@workspace:^, @backstage/backend-common@workspace:packages/backend-common":
+"@backstage/backend-common@^0.20.0, @backstage/backend-common@workspace:^, @backstage/backend-common@workspace:packages/backend-common":
   version: 0.0.0-use.local
   resolution: "@backstage/backend-common@workspace:packages/backend-common"
   dependencies:
@@ -3365,7 +3365,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@backstage/backend-plugin-api@workspace:^, @backstage/backend-plugin-api@workspace:packages/backend-plugin-api":
+"@backstage/backend-plugin-api@^0.6.8, @backstage/backend-plugin-api@workspace:^, @backstage/backend-plugin-api@workspace:packages/backend-plugin-api":
   version: 0.0.0-use.local
   resolution: "@backstage/backend-plugin-api@workspace:packages/backend-plugin-api"
   dependencies:
@@ -3439,7 +3439,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@backstage/backend-test-utils@workspace:^, @backstage/backend-test-utils@workspace:packages/backend-test-utils":
+"@backstage/backend-test-utils@^0.2.9, @backstage/backend-test-utils@workspace:^, @backstage/backend-test-utils@workspace:packages/backend-test-utils":
   version: 0.0.0-use.local
   resolution: "@backstage/backend-test-utils@workspace:packages/backend-test-utils"
   dependencies:
@@ -3496,7 +3496,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@backstage/cli-common@workspace:^, @backstage/cli-common@workspace:packages/cli-common":
+"@backstage/cli-common@^0.1.13, @backstage/cli-common@workspace:^, @backstage/cli-common@workspace:packages/cli-common":
   version: 0.0.0-use.local
   resolution: "@backstage/cli-common@workspace:packages/cli-common"
   dependencies:
@@ -3505,7 +3505,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@backstage/cli-node@workspace:^, @backstage/cli-node@workspace:packages/cli-node":
+"@backstage/cli-node@^0.2.1, @backstage/cli-node@workspace:^, @backstage/cli-node@workspace:packages/cli-node":
   version: 0.0.0-use.local
   resolution: "@backstage/cli-node@workspace:packages/cli-node"
   dependencies:
@@ -3526,25 +3526,25 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@backstage/cli@workspace:packages/cli"
   dependencies:
-    "@backstage/backend-common": "workspace:^"
-    "@backstage/backend-plugin-api": "workspace:^"
-    "@backstage/backend-test-utils": "workspace:^"
-    "@backstage/catalog-model": "workspace:^"
-    "@backstage/cli-common": "workspace:^"
-    "@backstage/cli-node": "workspace:^"
-    "@backstage/config": "workspace:^"
-    "@backstage/config-loader": "workspace:^"
-    "@backstage/core-app-api": "workspace:^"
-    "@backstage/core-components": "workspace:^"
-    "@backstage/core-plugin-api": "workspace:^"
-    "@backstage/dev-utils": "workspace:^"
-    "@backstage/errors": "workspace:^"
-    "@backstage/eslint-plugin": "workspace:^"
-    "@backstage/integration": "workspace:^"
-    "@backstage/release-manifests": "workspace:^"
-    "@backstage/test-utils": "workspace:^"
-    "@backstage/theme": "workspace:^"
-    "@backstage/types": "workspace:^"
+    "@backstage/backend-common": ^0.20.0
+    "@backstage/backend-plugin-api": ^0.6.8
+    "@backstage/backend-test-utils": ^0.2.9
+    "@backstage/catalog-model": ^1.4.3
+    "@backstage/cli-common": ^0.1.13
+    "@backstage/cli-node": ^0.2.1
+    "@backstage/config": ^1.1.1
+    "@backstage/config-loader": ^1.6.0
+    "@backstage/core-app-api": ^1.11.2
+    "@backstage/core-components": ^0.13.9
+    "@backstage/core-plugin-api": ^1.8.1
+    "@backstage/dev-utils": ^1.0.25
+    "@backstage/errors": ^1.2.3
+    "@backstage/eslint-plugin": ^0.1.4
+    "@backstage/integration": ^1.8.0
+    "@backstage/release-manifests": ^0.0.11
+    "@backstage/test-utils": ^1.4.6
+    "@backstage/theme": ^0.5.0
+    "@backstage/types": ^1.1.1
     "@manypkg/get-packages": ^1.1.3
     "@octokit/graphql": ^5.0.0
     "@octokit/graphql-schema": ^13.7.0
@@ -3703,7 +3703,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@backstage/config-loader@workspace:^, @backstage/config-loader@workspace:packages/config-loader":
+"@backstage/config-loader@^1.6.0, @backstage/config-loader@workspace:^, @backstage/config-loader@workspace:packages/config-loader":
   version: 0.0.0-use.local
   resolution: "@backstage/config-loader@workspace:packages/config-loader"
   dependencies:
@@ -3732,7 +3732,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@backstage/config@^1.0.6, @backstage/config@^1.0.7, @backstage/config@workspace:^, @backstage/config@workspace:packages/config":
+"@backstage/config@^1.0.6, @backstage/config@^1.0.7, @backstage/config@^1.1.1, @backstage/config@workspace:^, @backstage/config@workspace:packages/config":
   version: 0.0.0-use.local
   resolution: "@backstage/config@workspace:packages/config"
   dependencies:
@@ -3744,7 +3744,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@backstage/core-app-api@workspace:^, @backstage/core-app-api@workspace:packages/core-app-api":
+"@backstage/core-app-api@^1.11.2, @backstage/core-app-api@workspace:^, @backstage/core-app-api@workspace:packages/core-app-api":
   version: 0.0.0-use.local
   resolution: "@backstage/core-app-api@workspace:packages/core-app-api"
   dependencies:
@@ -3804,7 +3804,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@backstage/core-components@^0.13.8, @backstage/core-components@workspace:^, @backstage/core-components@workspace:packages/core-components":
+"@backstage/core-components@^0.13.8, @backstage/core-components@^0.13.9, @backstage/core-components@workspace:^, @backstage/core-components@workspace:packages/core-components":
   version: 0.0.0-use.local
   resolution: "@backstage/core-components@workspace:packages/core-components"
   dependencies:
@@ -3927,7 +3927,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@backstage/core-plugin-api@^1.3.0, @backstage/core-plugin-api@^1.5.0, @backstage/core-plugin-api@^1.8.0, @backstage/core-plugin-api@workspace:^, @backstage/core-plugin-api@workspace:packages/core-plugin-api":
+"@backstage/core-plugin-api@^1.3.0, @backstage/core-plugin-api@^1.5.0, @backstage/core-plugin-api@^1.8.0, @backstage/core-plugin-api@^1.8.1, @backstage/core-plugin-api@workspace:^, @backstage/core-plugin-api@workspace:packages/core-plugin-api":
   version: 0.0.0-use.local
   resolution: "@backstage/core-plugin-api@workspace:packages/core-plugin-api"
   dependencies:
@@ -3978,7 +3978,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@backstage/dev-utils@workspace:^, @backstage/dev-utils@workspace:packages/dev-utils":
+"@backstage/dev-utils@^1.0.25, @backstage/dev-utils@workspace:^, @backstage/dev-utils@workspace:packages/dev-utils":
   version: 0.0.0-use.local
   resolution: "@backstage/dev-utils@workspace:packages/dev-utils"
   dependencies:
@@ -4025,7 +4025,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@backstage/errors@^1.1.5, @backstage/errors@workspace:^, @backstage/errors@workspace:packages/errors":
+"@backstage/errors@^1.1.5, @backstage/errors@^1.2.3, @backstage/errors@workspace:^, @backstage/errors@workspace:packages/errors":
   version: 0.0.0-use.local
   resolution: "@backstage/errors@workspace:packages/errors"
   dependencies:
@@ -4035,7 +4035,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@backstage/eslint-plugin@workspace:^, @backstage/eslint-plugin@workspace:packages/eslint-plugin":
+"@backstage/eslint-plugin@^0.1.4, @backstage/eslint-plugin@workspace:packages/eslint-plugin":
   version: 0.0.0-use.local
   resolution: "@backstage/eslint-plugin@workspace:packages/eslint-plugin"
   dependencies:
@@ -4161,7 +4161,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@backstage/integration@workspace:^, @backstage/integration@workspace:packages/integration":
+"@backstage/integration@^1.8.0, @backstage/integration@workspace:^, @backstage/integration@workspace:packages/integration":
   version: 0.0.0-use.local
   resolution: "@backstage/integration@workspace:packages/integration"
   dependencies:
@@ -9897,7 +9897,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@backstage/release-manifests@workspace:^, @backstage/release-manifests@workspace:packages/release-manifests":
+"@backstage/release-manifests@^0.0.11, @backstage/release-manifests@workspace:packages/release-manifests":
   version: 0.0.0-use.local
   resolution: "@backstage/release-manifests@workspace:packages/release-manifests"
   dependencies:
@@ -9965,7 +9965,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@backstage/test-utils@workspace:^, @backstage/test-utils@workspace:packages/test-utils":
+"@backstage/test-utils@^1.4.6, @backstage/test-utils@workspace:^, @backstage/test-utils@workspace:packages/test-utils":
   version: 0.0.0-use.local
   resolution: "@backstage/test-utils@workspace:packages/test-utils"
   dependencies:
@@ -9990,6 +9990,26 @@ __metadata:
     react: ^16.13.1 || ^17.0.0 || ^18.0.0
     react-dom: ^16.13.1 || ^17.0.0 || ^18.0.0
     react-router-dom: 6.0.0-beta.0 || ^6.3.0
+  languageName: unknown
+  linkType: soft
+
+"@backstage/theme@^0.5.0, @backstage/theme@workspace:^, @backstage/theme@workspace:packages/theme":
+  version: 0.0.0-use.local
+  resolution: "@backstage/theme@workspace:packages/theme"
+  dependencies:
+    "@backstage/cli": "workspace:^"
+    "@emotion/react": ^11.10.5
+    "@emotion/styled": ^11.10.5
+    "@mui/material": ^5.12.2
+    "@mui/styles": ^5.14.18
+    "@testing-library/jest-dom": ^6.0.0
+    "@testing-library/react": ^14.0.0
+    "@types/react": ^16.13.1 || ^17.0.0
+  peerDependencies:
+    "@material-ui/core": ^4.12.2
+    "@types/react": ^16.13.1 || ^17.0.0
+    react: ^16.13.1 || ^17.0.0 || ^18.0.0
+    react-dom: ^16.13.1 || ^17.0.0 || ^18.0.0
   languageName: unknown
   linkType: soft
 
@@ -10021,27 +10041,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@backstage/theme@workspace:^, @backstage/theme@workspace:packages/theme":
-  version: 0.0.0-use.local
-  resolution: "@backstage/theme@workspace:packages/theme"
-  dependencies:
-    "@backstage/cli": "workspace:^"
-    "@emotion/react": ^11.10.5
-    "@emotion/styled": ^11.10.5
-    "@mui/material": ^5.12.2
-    "@mui/styles": ^5.14.18
-    "@testing-library/jest-dom": ^6.0.0
-    "@testing-library/react": ^14.0.0
-    "@types/react": ^16.13.1 || ^17.0.0
-  peerDependencies:
-    "@material-ui/core": ^4.12.2
-    "@types/react": ^16.13.1 || ^17.0.0
-    react: ^16.13.1 || ^17.0.0 || ^18.0.0
-    react-dom: ^16.13.1 || ^17.0.0 || ^18.0.0
-  languageName: unknown
-  linkType: soft
-
-"@backstage/types@^1.0.2, @backstage/types@workspace:^, @backstage/types@workspace:packages/types":
+"@backstage/types@^1.0.2, @backstage/types@^1.1.1, @backstage/types@workspace:^, @backstage/types@workspace:packages/types":
   version: 0.0.0-use.local
   resolution: "@backstage/types@workspace:packages/types"
   dependencies:
