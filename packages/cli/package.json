@@ -1,7 +1,7 @@
 {
-  "name": "@backstage/cli",
+  "name": "@harness/backstage-cli",
   "description": "CLI for developing Backstage plugins and apps",
-  "version": "0.25.0",
+  "version": "0.25.0-alpha.3",
   "publishConfig": {
     "access": "public"
   },

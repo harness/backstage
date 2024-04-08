@@ -143,3 +143,5 @@ export function DefaultCatalogPage(props: DefaultCatalogPageProps) {
     />
   );
 }
+
+
