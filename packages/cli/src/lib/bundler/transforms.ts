@@ -18,6 +18,9 @@ import { ModuleOptions, WebpackPluginInstance } from 'webpack';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import { svgrTemplate } from '../svgrTemplate';
 import ReactRefreshPlugin from '@pmmmwh/react-refresh-webpack-plugin';
+import path from 'path';
+
+const CONTEXT = process.cwd();
 
 type Transforms = {
   loaders: ModuleOptions['rules'];
@@ -168,6 +171,40 @@ export const transforms = (options: TransformOptions): Transforms => {
       generator: {
         filename: 'static/[name].[hash][ext][query]',
       },
+    },
+    {
+      test: /\.module\.scss$/,
+      exclude: /node_modules/,
+      use: [
+        MiniCssExtractPlugin.loader,
+        {
+          loader: '@harness/css-types-loader',
+          options: {
+            prettierConfig: CONTEXT,
+          },
+        },
+        {
+          loader: 'css-loader',
+          options: {
+            importLoaders: 1,
+            modules: {
+              mode: 'local',
+              localIdentName: 'idpapp[local]_[hash:base64:6]',
+              exportLocalsConvention: 'camelCaseOnly',
+            },
+          },
+        },
+        {
+          loader: 'sass-loader',
+          options: {
+            sassOptions: {
+              includePaths: [path.join(CONTEXT, 'src')],
+            },
+            sourceMap: false,
+            implementation: require('sass'),
+          },
+        },
+      ],
     },
     {
       test: /\.css$/i,

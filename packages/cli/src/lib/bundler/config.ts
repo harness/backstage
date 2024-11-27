@@ -33,7 +33,7 @@ import { getPackages } from '@manypkg/get-packages';
 import { isChildPath } from '@backstage/cli-common';
 import nodeExternals from 'webpack-node-externals';
 import { RetryChunkLoadPlugin } from 'webpack-retry-chunk-load-plugin';
-import { optimization } from './optimization';
+// import { optimization } from './optimization';
 import pickBy from 'lodash/pickBy';
 import { readEntryPoints } from '../entryPoints';
 import { runPlain } from '../run';
@@ -143,15 +143,8 @@ export async function createConfig(
       name: 'idp',
       filename: 'remoteEntry.js',
       exposes: {
+        './appInjector': './src/appInjector.tsx',
         './MicroFrontendApp': './src/App.tsx',
-      },
-      shared: {
-        react: {
-          singleton: true,
-        },
-        'react-dom': {
-          singleton: true,
-        },
       },
     }),
     new RetryChunkLoadPlugin({
