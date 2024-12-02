@@ -143,8 +143,15 @@ export async function createConfig(
       name: 'idp',
       filename: 'remoteEntry.js',
       exposes: {
-        './appInjector': './src/appInjector.tsx',
         './MicroFrontendApp': './src/App.tsx',
+      },
+      shared: {
+        react: {
+          singleton: true,
+        },
+        'react-dom': {
+          singleton: true,
+        },
       },
     }),
     new RetryChunkLoadPlugin({

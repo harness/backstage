@@ -235,6 +235,11 @@ export const transforms = (options: TransformOptions): Transforms => {
         new ReactRefreshPlugin({
           overlay: { sockProtocol: 'ws' },
         }),
+        new MiniCssExtractPlugin({
+          filename: 'static/[name].css',
+          chunkFilename: 'static/[name].[id].css',
+          insert: insertBeforeJssStyles, // Only applies to async chunks
+        }),
       );
     }
   } else {
