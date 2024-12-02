@@ -16,7 +16,7 @@
 
 import { BackendBundlingOptions, BundlingOptions } from './types';
 import { posix as posixPath, resolve as resolvePath } from 'path';
-import webpack, { ProvidePlugin } from 'webpack';
+import webpack, { ProvidePlugin, container } from 'webpack';
 
 import { BackstagePackage } from '@backstage/cli-node';
 import { BundlingPaths } from './paths';
@@ -32,7 +32,7 @@ import fs from 'fs-extra';
 import { getPackages } from '@manypkg/get-packages';
 import { isChildPath } from '@backstage/cli-common';
 import nodeExternals from 'webpack-node-externals';
-import { optimization } from './optimization';
+import { RetryChunkLoadPlugin } from 'webpack-retry-chunk-load-plugin';
 import pickBy from 'lodash/pickBy';
 import { readEntryPoints } from '../entryPoints';
 import { runPlain } from '../run';
@@ -42,6 +42,8 @@ import yn from 'yn';
 import { hasReactDomClient } from './hasReactDomClient';
 
 const BUILD_CACHE_ENV_VAR = 'BACKSTAGE_CLI_EXPERIMENTAL_BUILD_CACHE';
+
+const ModuleFederationPlugin = container.ModuleFederationPlugin;
 
 export function resolveBaseUrl(config: Config): URL {
   const baseUrl = config.getOptionalString('app.baseUrl');
@@ -141,6 +143,27 @@ export async function createConfig(
     }),
   );
 
+  plugins.push(
+    new ModuleFederationPlugin({
+      name: 'idp',
+      filename: 'remoteEntry.js',
+      exposes: {
+        './MicroFrontendApp': './src/App.tsx',
+      },
+      shared: {
+        react: {
+          singleton: true,
+        },
+        'react-dom': {
+          singleton: true,
+        },
+      },
+    }),
+    new RetryChunkLoadPlugin({
+      maxRetries: 3,
+    }),
+  );
+
   const buildInfo = await readBuildInfo();
   plugins.push(
     new webpack.DefinePlugin({
@@ -171,7 +194,7 @@ export async function createConfig(
   return {
     mode: isDev ? 'development' : 'production',
     profile: false,
-    optimization: optimization(options),
+    // optimization: optimization(options),
     bail: false,
     performance: {
       hints: false, // we check the gzip size instead
@@ -212,7 +235,7 @@ export async function createConfig(
     },
     output: {
       path: paths.targetDist,
-      publicPath: `${publicPath}/`,
+      publicPath: `auto`,
       filename: isDev ? '[name].js' : 'static/[name].[fullhash:8].js',
       chunkFilename: isDev
         ? '[name].chunk.js'

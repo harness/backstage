@@ -172,6 +172,7 @@ DEPRECATION WARNING: React Router Beta is deprecated and support for it will be 
     } = require('vite-plugin-node-polyfills');
     const { createHtmlPlugin: viteHtml } = require('vite-plugin-html');
     viteServer = await vite.createServer({
+      appType: 'custom',
       define: {
         global: 'window',
         'process.argv': JSON.stringify(process.argv),
@@ -238,7 +239,7 @@ DEPRECATION WARNING: React Router Beta is deprecated and support for it will be 
           disableDotRule: true,
 
           // The index needs to be rewritten relative to the new public path, including subroutes.
-          index: `${config.output?.publicPath}index.html`,
+          // index: `${config.output?.publicPath}index.html`,
         },
         server:
           url.protocol === 'https:'

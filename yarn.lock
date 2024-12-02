@@ -3851,7 +3851,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@backstage/catalog-model@^1.4.3, @backstage/catalog-model@^1.4.5, @backstage/catalog-model@workspace:^, @backstage/catalog-model@workspace:packages/catalog-model":
+"@backstage/catalog-model@1.5.0, @backstage/catalog-model@^1.4.3, @backstage/catalog-model@^1.4.5, @backstage/catalog-model@workspace:^, @backstage/catalog-model@workspace:packages/catalog-model":
   version: 0.0.0-use.local
   resolution: "@backstage/catalog-model@workspace:packages/catalog-model"
   dependencies:
@@ -3866,7 +3866,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@backstage/cli-common@workspace:^, @backstage/cli-common@workspace:packages/cli-common":
+"@backstage/cli-common@0.1.14, @backstage/cli-common@workspace:^, @backstage/cli-common@workspace:packages/cli-common":
   version: 0.0.0-use.local
   resolution: "@backstage/cli-common@workspace:packages/cli-common"
   dependencies:
@@ -3875,7 +3875,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@backstage/cli-node@workspace:^, @backstage/cli-node@workspace:packages/cli-node":
+"@backstage/cli-node@0.2.6, @backstage/cli-node@workspace:^, @backstage/cli-node@workspace:packages/cli-node":
   version: 0.0.0-use.local
   resolution: "@backstage/cli-node@workspace:packages/cli-node"
   dependencies:
@@ -3899,22 +3899,23 @@ __metadata:
     "@backstage/backend-common": "workspace:^"
     "@backstage/backend-plugin-api": "workspace:^"
     "@backstage/backend-test-utils": "workspace:^"
-    "@backstage/catalog-model": "workspace:^"
-    "@backstage/cli-common": "workspace:^"
-    "@backstage/cli-node": "workspace:^"
+    "@backstage/catalog-model": 1.5.0
+    "@backstage/cli-common": 0.1.14
+    "@backstage/cli-node": 0.2.6
     "@backstage/config": "workspace:^"
-    "@backstage/config-loader": "workspace:^"
+    "@backstage/config-loader": 1.8.1
     "@backstage/core-app-api": "workspace:^"
     "@backstage/core-components": "workspace:^"
     "@backstage/core-plugin-api": "workspace:^"
     "@backstage/dev-utils": "workspace:^"
-    "@backstage/errors": "workspace:^"
-    "@backstage/eslint-plugin": "workspace:^"
-    "@backstage/integration": "workspace:^"
-    "@backstage/release-manifests": "workspace:^"
+    "@backstage/errors": 1.2.4
+    "@backstage/eslint-plugin": 0.1.8
+    "@backstage/integration": 1.12.0
+    "@backstage/release-manifests": 0.0.11
     "@backstage/test-utils": "workspace:^"
     "@backstage/theme": "workspace:^"
-    "@backstage/types": "workspace:^"
+    "@backstage/types": 1.1.1
+    "@harness/css-types-loader": ^4.0.0
     "@manypkg/get-packages": ^1.1.3
     "@octokit/graphql": ^5.0.0
     "@octokit/graphql-schema": ^13.7.0
@@ -4022,6 +4023,8 @@ __metadata:
     rollup-plugin-postcss: ^4.0.0
     rollup-pluginutils: ^2.8.2
     run-script-webpack-plugin: ^0.2.0
+    sass: ^1.22.10
+    sass-loader: ^7.2.0
     semver: ^7.5.3
     style-loader: ^3.3.1
     sucrase: ^3.20.2
@@ -4035,6 +4038,7 @@ __metadata:
     webpack: ^5.70.0
     webpack-dev-server: ^5.0.0
     webpack-node-externals: ^3.0.0
+    webpack-retry-chunk-load-plugin: ^3.0.0
     yaml: ^2.0.0
     yml-loader: ^2.1.0
     yn: ^4.0.0
@@ -4075,7 +4079,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@backstage/config-loader@workspace:^, @backstage/config-loader@workspace:packages/config-loader":
+"@backstage/config-loader@1.8.1, @backstage/config-loader@workspace:^, @backstage/config-loader@workspace:packages/config-loader":
   version: 0.0.0-use.local
   resolution: "@backstage/config-loader@workspace:packages/config-loader"
   dependencies:
@@ -4395,7 +4399,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@backstage/errors@^1.2.3, @backstage/errors@^1.2.4, @backstage/errors@workspace:^, @backstage/errors@workspace:packages/errors":
+"@backstage/errors@1.2.4, @backstage/errors@^1.2.3, @backstage/errors@^1.2.4, @backstage/errors@workspace:^, @backstage/errors@workspace:packages/errors":
   version: 0.0.0-use.local
   resolution: "@backstage/errors@workspace:packages/errors"
   dependencies:
@@ -4405,7 +4409,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@backstage/eslint-plugin@workspace:^, @backstage/eslint-plugin@workspace:packages/eslint-plugin":
+"@backstage/eslint-plugin@0.1.8, @backstage/eslint-plugin@workspace:packages/eslint-plugin":
   version: 0.0.0-use.local
   resolution: "@backstage/eslint-plugin@workspace:packages/eslint-plugin"
   dependencies:
@@ -4531,7 +4535,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@backstage/integration@workspace:^, @backstage/integration@workspace:packages/integration":
+"@backstage/integration@1.12.0, @backstage/integration@workspace:^, @backstage/integration@workspace:packages/integration":
   version: 0.0.0-use.local
   resolution: "@backstage/integration@workspace:packages/integration"
   dependencies:
@@ -7796,7 +7800,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@backstage/release-manifests@workspace:^, @backstage/release-manifests@workspace:packages/release-manifests":
+"@backstage/release-manifests@0.0.11, @backstage/release-manifests@workspace:^, @backstage/release-manifests@workspace:packages/release-manifests":
   version: 0.0.0-use.local
   resolution: "@backstage/release-manifests@workspace:packages/release-manifests"
   dependencies:
@@ -7913,7 +7917,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@backstage/types@^1.1.1, @backstage/types@workspace:^, @backstage/types@workspace:packages/types":
+"@backstage/types@1.1.1, @backstage/types@^1.1.1, @backstage/types@workspace:^, @backstage/types@workspace:packages/types":
   version: 0.0.0-use.local
   resolution: "@backstage/types@workspace:packages/types"
   dependencies:
@@ -9649,6 +9653,17 @@ __metadata:
     "@hapi/hoek": ^9.0.0
     "@hapi/topo": ^5.0.0
   checksum: dd6f8d6e33ac55d430448bc83c33572a593702ae856186610161a9488a611110ac4f793339043ea44a6f79bebe689bc7f86122df2f817725255159a0c1cb62ec
+  languageName: node
+  linkType: hard
+
+"@harness/css-types-loader@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "@harness/css-types-loader@npm:4.0.0::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40harness%2Fcss-types-loader%2F4.0.0%2F565b7b150c0248c2828801a8a4ada917f0aafeeb"
+  dependencies:
+    loader-utils: ^2.0.4
+  peerDependencies:
+    typescript: ^5.0.4
+  checksum: d2b05bd251277277e658a4393972badda2ab33614fa1957c62163d5be307ca6f98eae40b27df0b4e5360e17376d816980e3bd1aef24f5bd6819367f194dd4868
   languageName: node
   linkType: hard
 
@@ -13390,6 +13405,150 @@ __metadata:
     react-dom: ^18.0.0
     react-router-dom: ^6.4.3
   checksum: 4d1bf78b3fc6cce80b3cbc1abef5613bb609d2262e0d410aa57cc7e175eaf5cb727796ab61b44507f5c826b1f059f4ec03c280ce6cdbf7291d4461d745a9b5b6
+  languageName: node
+  linkType: hard
+
+"@parcel/watcher-android-arm64@npm:2.5.0":
+  version: 2.5.0
+  resolution: "@parcel/watcher-android-arm64@npm:2.5.0"
+  conditions: os=android & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@parcel/watcher-darwin-arm64@npm:2.5.0":
+  version: 2.5.0
+  resolution: "@parcel/watcher-darwin-arm64@npm:2.5.0"
+  conditions: os=darwin & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@parcel/watcher-darwin-x64@npm:2.5.0":
+  version: 2.5.0
+  resolution: "@parcel/watcher-darwin-x64@npm:2.5.0"
+  conditions: os=darwin & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@parcel/watcher-freebsd-x64@npm:2.5.0":
+  version: 2.5.0
+  resolution: "@parcel/watcher-freebsd-x64@npm:2.5.0"
+  conditions: os=freebsd & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@parcel/watcher-linux-arm-glibc@npm:2.5.0":
+  version: 2.5.0
+  resolution: "@parcel/watcher-linux-arm-glibc@npm:2.5.0"
+  conditions: os=linux & cpu=arm & libc=glibc
+  languageName: node
+  linkType: hard
+
+"@parcel/watcher-linux-arm-musl@npm:2.5.0":
+  version: 2.5.0
+  resolution: "@parcel/watcher-linux-arm-musl@npm:2.5.0"
+  conditions: os=linux & cpu=arm & libc=musl
+  languageName: node
+  linkType: hard
+
+"@parcel/watcher-linux-arm64-glibc@npm:2.5.0":
+  version: 2.5.0
+  resolution: "@parcel/watcher-linux-arm64-glibc@npm:2.5.0"
+  conditions: os=linux & cpu=arm64 & libc=glibc
+  languageName: node
+  linkType: hard
+
+"@parcel/watcher-linux-arm64-musl@npm:2.5.0":
+  version: 2.5.0
+  resolution: "@parcel/watcher-linux-arm64-musl@npm:2.5.0"
+  conditions: os=linux & cpu=arm64 & libc=musl
+  languageName: node
+  linkType: hard
+
+"@parcel/watcher-linux-x64-glibc@npm:2.5.0":
+  version: 2.5.0
+  resolution: "@parcel/watcher-linux-x64-glibc@npm:2.5.0"
+  conditions: os=linux & cpu=x64 & libc=glibc
+  languageName: node
+  linkType: hard
+
+"@parcel/watcher-linux-x64-musl@npm:2.5.0":
+  version: 2.5.0
+  resolution: "@parcel/watcher-linux-x64-musl@npm:2.5.0"
+  conditions: os=linux & cpu=x64 & libc=musl
+  languageName: node
+  linkType: hard
+
+"@parcel/watcher-win32-arm64@npm:2.5.0":
+  version: 2.5.0
+  resolution: "@parcel/watcher-win32-arm64@npm:2.5.0"
+  conditions: os=win32 & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@parcel/watcher-win32-ia32@npm:2.5.0":
+  version: 2.5.0
+  resolution: "@parcel/watcher-win32-ia32@npm:2.5.0"
+  conditions: os=win32 & cpu=ia32
+  languageName: node
+  linkType: hard
+
+"@parcel/watcher-win32-x64@npm:2.5.0":
+  version: 2.5.0
+  resolution: "@parcel/watcher-win32-x64@npm:2.5.0"
+  conditions: os=win32 & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@parcel/watcher@npm:^2.4.1":
+  version: 2.5.0
+  resolution: "@parcel/watcher@npm:2.5.0"
+  dependencies:
+    "@parcel/watcher-android-arm64": 2.5.0
+    "@parcel/watcher-darwin-arm64": 2.5.0
+    "@parcel/watcher-darwin-x64": 2.5.0
+    "@parcel/watcher-freebsd-x64": 2.5.0
+    "@parcel/watcher-linux-arm-glibc": 2.5.0
+    "@parcel/watcher-linux-arm-musl": 2.5.0
+    "@parcel/watcher-linux-arm64-glibc": 2.5.0
+    "@parcel/watcher-linux-arm64-musl": 2.5.0
+    "@parcel/watcher-linux-x64-glibc": 2.5.0
+    "@parcel/watcher-linux-x64-musl": 2.5.0
+    "@parcel/watcher-win32-arm64": 2.5.0
+    "@parcel/watcher-win32-ia32": 2.5.0
+    "@parcel/watcher-win32-x64": 2.5.0
+    detect-libc: ^1.0.3
+    is-glob: ^4.0.3
+    micromatch: ^4.0.5
+    node-addon-api: ^7.0.0
+    node-gyp: latest
+  dependenciesMeta:
+    "@parcel/watcher-android-arm64":
+      optional: true
+    "@parcel/watcher-darwin-arm64":
+      optional: true
+    "@parcel/watcher-darwin-x64":
+      optional: true
+    "@parcel/watcher-freebsd-x64":
+      optional: true
+    "@parcel/watcher-linux-arm-glibc":
+      optional: true
+    "@parcel/watcher-linux-arm-musl":
+      optional: true
+    "@parcel/watcher-linux-arm64-glibc":
+      optional: true
+    "@parcel/watcher-linux-arm64-musl":
+      optional: true
+    "@parcel/watcher-linux-x64-glibc":
+      optional: true
+    "@parcel/watcher-linux-x64-musl":
+      optional: true
+    "@parcel/watcher-win32-arm64":
+      optional: true
+    "@parcel/watcher-win32-ia32":
+      optional: true
+    "@parcel/watcher-win32-x64":
+      optional: true
+  checksum: 253f93c5f443dfbb638df58712df077fe46ff7e01e7c78df0c4ceb001e8f5b31db01eb7ddac3ae4159722c4d1525894cd4ce5be49f5e6c14a3a52cbbf9f41cbf
   languageName: node
   linkType: hard
 
@@ -22170,6 +22329,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"chokidar@npm:^4.0.0":
+  version: 4.0.1
+  resolution: "chokidar@npm:4.0.1"
+  dependencies:
+    readdirp: ^4.0.1
+  checksum: 193da9786b0422a895d59c7552195d15c6c636e6a2293ae43d09e34e243e24ccd02d693f007c767846a65abbeae5fea6bfacb8fc2ddec4ea4d397620d552010d
+  languageName: node
+  linkType: hard
+
 "chownr@npm:^1.1.1":
   version: 1.1.4
   resolution: "chownr@npm:1.1.4"
@@ -24413,6 +24581,15 @@ __metadata:
   version: 7.0.1
   resolution: "detect-indent@npm:7.0.1"
   checksum: cbf3f0b1c3c881934ca94428e1179b26ab2a587e0d719031d37a67fb506d49d067de54ff057cb1e772e75975fed5155c01cd4518306fee60988b1486e3fc7768
+  languageName: node
+  linkType: hard
+
+"detect-libc@npm:^1.0.3":
+  version: 1.0.3
+  resolution: "detect-libc@npm:1.0.3"
+  bin:
+    detect-libc: ./bin/detect-libc.js
+  checksum: daaaed925ffa7889bd91d56e9624e6c8033911bb60f3a50a74a87500680652969dbaab9526d1e200a4c94acf80fc862a22131841145a0a8482d60a99c24f4a3e
   languageName: node
   linkType: hard
 
@@ -29009,6 +29186,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"immutable@npm:^5.0.2":
+  version: 5.0.3
+  resolution: "immutable@npm:5.0.3"
+  checksum: b2fcfc75aff29634babfcf6afb102111d7bc3858bfc55c17c5ad5eedf11085fe8b72d59fac883c6cfe9b2ec6e72cc184dec88782d5375ab17dc4eb25e3a665ed
+  languageName: node
+  linkType: hard
+
 "import-cwd@npm:^3.0.0":
   version: 3.0.0
   resolution: "import-cwd@npm:3.0.0"
@@ -31988,7 +32172,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"loader-utils@npm:^1.1.0":
+"loader-utils@npm:^1.0.1, loader-utils@npm:^1.1.0":
   version: 1.4.2
   resolution: "loader-utils@npm:1.4.2"
   dependencies:
@@ -34311,6 +34495,15 @@ __metadata:
   version: 3.1.1
   resolution: "node-abort-controller@npm:3.1.1"
   checksum: 2c340916af9710328b11c0828223fc65ba320e0d082214a211311bf64c2891028e42ef276b9799188c4ada9e6e1c54cf7a0b7c05dd9d59fcdc8cd633304c8047
+  languageName: node
+  linkType: hard
+
+"node-addon-api@npm:^7.0.0":
+  version: 7.1.1
+  resolution: "node-addon-api@npm:7.1.1"
+  dependencies:
+    node-gyp: latest
+  checksum: 46051999e3289f205799dfaf6bcb017055d7569090f0004811110312e2db94cb4f8654602c7eb77a60a1a05142cc2b96e1b5c56ca4622c41a5c6370787faaf30
   languageName: node
   linkType: hard
 
@@ -36996,7 +37189,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:^2.2.1, prettier@npm:^2.7.1":
+"prettier@npm:^2.2.1, prettier@npm:^2.6.2, prettier@npm:^2.7.1":
   version: 2.8.8
   resolution: "prettier@npm:2.8.8"
   bin:
@@ -38479,6 +38672,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"readdirp@npm:^4.0.1":
+  version: 4.0.2
+  resolution: "readdirp@npm:4.0.2"
+  checksum: 309376e717f94fb7eb61bec21e2603243a9e2420cd2e9bf94ddf026aefea0d7377ed1a62f016d33265682e44908049a55c3cfc2307450a1421654ea008489b39
+  languageName: node
+  linkType: hard
+
 "readline-sync@npm:1.4.9":
   version: 1.4.9
   resolution: "readline-sync@npm:1.4.9"
@@ -39572,6 +39772,38 @@ __metadata:
   languageName: node
   linkType: hard
 
+"sass-loader@npm:^7.2.0":
+  version: 7.3.1
+  resolution: "sass-loader@npm:7.3.1"
+  dependencies:
+    clone-deep: ^4.0.1
+    loader-utils: ^1.0.1
+    neo-async: ^2.5.0
+    pify: ^4.0.1
+    semver: ^6.3.0
+  peerDependencies:
+    webpack: ^3.0.0 || ^4.0.0
+  checksum: 9e7b438cbc6197970f8db7973de5904c92d6914ace03eee158b5d8a07fdc611fb97105d8fa15edea13727ec2f01cecba708662a04a70a4bfe73a7ec5d6266f8d
+  languageName: node
+  linkType: hard
+
+"sass@npm:^1.22.10":
+  version: 1.81.0
+  resolution: "sass@npm:1.81.0"
+  dependencies:
+    "@parcel/watcher": ^2.4.1
+    chokidar: ^4.0.0
+    immutable: ^5.0.2
+    source-map-js: ">=0.6.2 <2.0.0"
+  dependenciesMeta:
+    "@parcel/watcher":
+      optional: true
+  bin:
+    sass: sass.js
+  checksum: 93db5b342c3b0449af2b08123ed4c0793643bd3a30f78e4e0686a1aa991ad640e0d9bc8da09aa5d7ff313bbd317b3be9c827cca60fb33b07d9f4b14b001eccfe
+  languageName: node
+  linkType: hard
+
 "sax@npm:>=0.6.0":
   version: 1.2.4
   resolution: "sax@npm:1.2.4"
@@ -40368,10 +40600,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"source-map-js@npm:^1.2.0":
-  version: 1.2.0
-  resolution: "source-map-js@npm:1.2.0"
-  checksum: 791a43306d9223792e84293b00458bf102a8946e7188f3db0e4e22d8d530b5f80a4ce468eb5ec0bf585443ad55ebbd630bf379c98db0b1f317fd902500217f97
+"source-map-js@npm:>=0.6.2 <2.0.0, source-map-js@npm:^1.2.0":
+  version: 1.2.1
+  resolution: "source-map-js@npm:1.2.1"
+  checksum: 4eb0cd997cdf228bc253bcaff9340afeb706176e64868ecd20efbe6efea931465f43955612346d6b7318789e5265bdc419bc7669c1cebe3db0eb255f57efa76b
   languageName: node
   linkType: hard
 
@@ -43851,6 +44083,17 @@ __metadata:
   version: 3.0.0
   resolution: "webpack-node-externals@npm:3.0.0"
   checksum: 355080c35c821115b97dda8c93d9d0565a90a6012a532324eb0d6a64f8f0d609431fd29504fc7ce414755841ac14f601f3eef99472c2c5dc00233b504ebe73f2
+  languageName: node
+  linkType: hard
+
+"webpack-retry-chunk-load-plugin@npm:^3.0.0":
+  version: 3.1.1
+  resolution: "webpack-retry-chunk-load-plugin@npm:3.1.1"
+  dependencies:
+    prettier: ^2.6.2
+  peerDependencies:
+    webpack: ">=5.0.0"
+  checksum: ea621b7317691378d93dbfa67737657e7628d51988ae5540e04a0bd8e91deeadcd5cb5ba8d8995c89b5eb532190c2d818029992b34305821ea72376296dcdf8d
   languageName: node
   linkType: hard
 
