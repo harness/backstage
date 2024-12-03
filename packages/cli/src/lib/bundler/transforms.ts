@@ -234,7 +234,12 @@ export const transforms = (options: TransformOptions): Transforms => {
     if (!isBackend) {
       plugins.push(
         new ReactRefreshPlugin({
-          overlay: { sockProtocol: 'ws' },
+          overlay: false,
+        }),
+        new MiniCssExtractPlugin({
+          filename: 'static/[name].css',
+          chunkFilename: 'static/[name].[id].css',
+          insert: insertBeforeJssStyles, // Only applies to async chunks
         }),
       );
     }

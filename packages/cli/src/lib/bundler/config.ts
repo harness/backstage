@@ -17,14 +17,16 @@
 import { BackendBundlingOptions, BundlingOptions } from './types';
 import { posix as posixPath, resolve as resolvePath } from 'path';
 import webpack, { ProvidePlugin, container } from 'webpack';
-
+import prettier from 'prettier';
 import { BackstagePackage } from '@backstage/cli-node';
 import { BundlingPaths } from './paths';
 import { Config } from '@backstage/config';
 import ESLintPlugin from 'eslint-webpack-plugin';
 import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
+import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin';
 import { LinkedPackageResolvePlugin } from './LinkedPackageResolvePlugin';
+import { GenerateStringTypesPlugin } from './GenerateStringTypesPlugin';
 import ModuleScopePlugin from 'react-dev-utils/ModuleScopePlugin';
 import { RunScriptWebpackPlugin } from 'run-script-webpack-plugin';
 import { paths as cliPaths } from '../../lib/paths';
@@ -162,6 +164,19 @@ export async function createConfig(
     new RetryChunkLoadPlugin({
       maxRetries: 3,
     }),
+    new GenerateStringTypesPlugin({
+      input: './src/strings/strings.en.yaml',
+      output: './src/strings/types.ts',
+      partialType: true,
+      preProcess: async (content: any) => {
+        const prettierConfig = await prettier.resolveConfig(process.cwd());
+
+        return prettier.format(content, {
+          ...prettierConfig,
+          parser: 'typescript',
+        });
+      },
+    }),
   );
 
   const buildInfo = await readBuildInfo();
@@ -172,6 +187,7 @@ export async function createConfig(
         () => JSON.stringify(options.getFrontendAppConfigs()),
         true,
       ),
+      __DEV__: isDev,
       // This allows for conditional imports of react-dom/client, since there's no way
       // to check for presence of it in source code without module resolution errors.
       'process.env.HAS_REACT_DOM_CLIENT': JSON.stringify(hasReactDomClient()),
@@ -228,6 +244,7 @@ export async function createConfig(
           [paths.targetSrc, paths.targetDev],
           [paths.targetPackageJson, ...reactRefreshFiles],
         ),
+        new TsconfigPathsPlugin(),
       ],
     },
     module: {

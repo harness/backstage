@@ -1,6 +1,6 @@
 {
   "name": "@backstage/cli",
-  "version": "0.26.10-alpha.1",
+  "version": "0.26.10-alpha.4",
   "description": "CLI for developing Backstage plugins and apps",
   "backstage": {
     "role": "cli"
@@ -121,6 +121,7 @@
     "lodash": "^4.17.21",
     "mini-css-extract-plugin": "^2.4.2",
     "minimatch": "^9.0.0",
+    "mustache": "^4.2.0",
     "node-fetch": "^2.6.7",
     "node-libs-browser": "^2.2.1",
     "npm-packlist": "^5.0.0",
@@ -148,6 +149,7 @@
     "swc-loader": "^0.2.3",
     "tar": "^6.1.12",
     "terser-webpack-plugin": "^5.1.3",
+    "tsconfig-paths-webpack-plugin": "^4.2.0",
     "util": "^0.12.3",
     "webpack": "^5.70.0",
     "webpack-dev-server": "^5.0.0",
@@ -195,6 +197,7 @@
   },
   "peerDependencies": {
     "@vitejs/plugin-react": "^4.0.4",
+    "prettier": "^2.3.2",
     "vite": "^4.4.9",
     "vite-plugin-html": "^3.2.0",
     "vite-plugin-node-polyfills": "^0.22.0"
