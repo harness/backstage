@@ -166,12 +166,17 @@ export class BuiltinKindsEntityProcessor implements CatalogProcessor {
         RELATION_DEPENDS_ON,
         RELATION_DEPENDENCY_OF,
       );
-      doEmit(
-        component.spec.system,
-        { defaultKind: 'System', defaultNamespace: selfRef.namespace },
-        RELATION_PART_OF,
-        RELATION_HAS_PART,
-      );
+      const componentSystems = Array.isArray(component.spec.system)
+        ? component.spec.system
+        : [component.spec.system];
+      componentSystems.forEach((system?: string) => {
+        doEmit(
+          system,
+          { defaultKind: 'System', defaultNamespace: selfRef.namespace },
+          RELATION_PART_OF,
+          RELATION_HAS_PART,
+        );
+      });
     }
 
     /*
@@ -186,12 +191,17 @@ export class BuiltinKindsEntityProcessor implements CatalogProcessor {
         RELATION_OWNED_BY,
         RELATION_OWNER_OF,
       );
-      doEmit(
-        api.spec.system,
-        { defaultKind: 'System', defaultNamespace: selfRef.namespace },
-        RELATION_PART_OF,
-        RELATION_HAS_PART,
-      );
+      const apiSystems = Array.isArray(api.spec.system)
+        ? api.spec.system
+        : [api.spec.system];
+      apiSystems.forEach((system: string) => {
+        doEmit(
+          system,
+          { defaultKind: 'System', defaultNamespace: selfRef.namespace },
+          RELATION_PART_OF,
+          RELATION_HAS_PART,
+        );
+      });
     }
 
     /*
@@ -218,12 +228,17 @@ export class BuiltinKindsEntityProcessor implements CatalogProcessor {
         RELATION_DEPENDENCY_OF,
         RELATION_DEPENDS_ON,
       );
-      doEmit(
-        resource.spec.system,
-        { defaultKind: 'System', defaultNamespace: selfRef.namespace },
-        RELATION_PART_OF,
-        RELATION_HAS_PART,
-      );
+      const resourceSystems = Array.isArray(resource.spec.system)
+        ? resource.spec.system
+        : [resource.spec.system];
+      resourceSystems.forEach((system: string) => {
+        doEmit(
+          system,
+          { defaultKind: 'System', defaultNamespace: selfRef.namespace },
+          RELATION_PART_OF,
+          RELATION_HAS_PART,
+        );
+      });
     }
 
     /*

@@ -46,7 +46,7 @@ describe('BuiltinKindsEntityProcessor', () => {
           providesApis: ['b'],
           consumesApis: ['c'],
           dependsOn: ['Resource:r', 'Component:d'],
-          system: 's',
+          system: ['s'],
         },
       };
 
@@ -180,7 +180,7 @@ describe('BuiltinKindsEntityProcessor', () => {
           providesApis: ['b'],
           consumesApis: ['c'],
           dependsOn: ['r'],
-          system: 's',
+          system: ['s'],
         },
       };
       await expect(

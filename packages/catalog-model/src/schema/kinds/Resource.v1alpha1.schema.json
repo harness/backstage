@@ -56,9 +56,12 @@
               }
             },
             "system": {
-              "type": "string",
-              "description": "An entity reference to the system that the resource belongs to.",
-              "minLength": 1
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "An entity reference to the systems that the resource belongs to.",
+              "minItems": 1
             }
           }
         }

@@ -37,7 +37,7 @@ describe('ComponentV1alpha1Validator', () => {
         providesApis: ['api-0'],
         consumesApis: ['api-0'],
         dependsOn: ['resource:resource-0', 'component:component-0'],
-        system: 'system',
+        system: ['system'],
       },
     };
   });

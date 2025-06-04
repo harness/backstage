@@ -38,7 +38,7 @@ export interface ComponentEntityV1alpha1 extends Entity {
     providesApis?: string[];
     consumesApis?: string[];
     dependsOn?: string[];
-    system?: string;
+    system?: string[];
   };
 }
 

@@ -62,9 +62,12 @@
               "minLength": 1
             },
             "system": {
-              "type": "string",
-              "description": "An entity reference to the system that the API belongs to.",
-              "minLength": 1
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "An entity reference to the systems that the API belongs to.",
+              "minItems": 1
             },
             "definition": {
               "type": "string",
