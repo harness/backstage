@@ -200,7 +200,7 @@ describe('BuiltinKindsEntityProcessor', () => {
           owner: 'o',
           lifecycle: 'l',
           definition: 'd',
-          system: 's',
+          system: ['s'],
         },
       };
 
@@ -251,7 +251,7 @@ describe('BuiltinKindsEntityProcessor', () => {
           owner: 'o',
           dependsOn: ['Component:c', 'Resource:r'],
           dependencyOf: ['Component:d'],
-          system: 's',
+          system: ['s'],
         },
       };
 
@@ -353,7 +353,7 @@ describe('BuiltinKindsEntityProcessor', () => {
           type: 'database',
           owner: 'o',
           dependsOn: ['c'],
-          system: 's',
+          system: ['s'],
         },
       };
       await expect(

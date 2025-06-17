@@ -35,7 +35,7 @@ export interface ApiEntityV1alpha1 extends Entity {
     lifecycle: string;
     owner: string;
     definition: string;
-    system?: string;
+    system?: string[];
   };
 }
 

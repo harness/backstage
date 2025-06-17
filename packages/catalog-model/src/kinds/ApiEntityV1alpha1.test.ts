@@ -70,7 +70,7 @@ components:
       items:
         $ref: "#/components/schemas/Pet"
 `,
-        system: 'system',
+        system: ['system'],
       },
     };
   });

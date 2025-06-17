@@ -33,7 +33,7 @@ describe('ResourceV1alpha1Validator', () => {
         type: 'database',
         owner: 'me',
         dependsOn: ['component:component-0', 'resource:resource-0'],
-        system: 'system',
+        system: ['system'],
       },
     };
   });

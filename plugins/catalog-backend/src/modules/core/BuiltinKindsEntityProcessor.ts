@@ -194,7 +194,7 @@ export class BuiltinKindsEntityProcessor implements CatalogProcessor {
       const apiSystems = Array.isArray(api.spec.system)
         ? api.spec.system
         : [api.spec.system];
-      apiSystems.forEach((system: string) => {
+      apiSystems.forEach((system?: string) => {
         doEmit(
           system,
           { defaultKind: 'System', defaultNamespace: selfRef.namespace },
@@ -231,7 +231,7 @@ export class BuiltinKindsEntityProcessor implements CatalogProcessor {
       const resourceSystems = Array.isArray(resource.spec.system)
         ? resource.spec.system
         : [resource.spec.system];
-      resourceSystems.forEach((system: string) => {
+      resourceSystems.forEach((system?: string) => {
         doEmit(
           system,
           { defaultKind: 'System', defaultNamespace: selfRef.namespace },
@@ -293,6 +293,19 @@ export class BuiltinKindsEntityProcessor implements CatalogProcessor {
         RELATION_OWNED_BY,
         RELATION_OWNER_OF,
       );
+      // nested system
+      const nestedSystems = Array.isArray(system.spec.system)
+        ? system.spec.system
+        : [system.spec.system];
+      nestedSystems.forEach((item?: string) => {
+        doEmit(
+          item,
+          { defaultKind: 'System', defaultNamespace: selfRef.namespace },
+          RELATION_PART_OF,
+          RELATION_HAS_PART,
+        );
+      });
+
       doEmit(
         system.spec.domain,
         { defaultKind: 'Domain', defaultNamespace: selfRef.namespace },

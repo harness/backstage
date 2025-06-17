@@ -45,6 +45,14 @@
               "description": "An entity reference to the domain that the system belongs to.",
               "examples": ["artists"],
               "minLength": 1
+            },
+            "system": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "An entity reference to the systems that the resource belongs to.",
+              "minItems": 1
             }
           }
         }
